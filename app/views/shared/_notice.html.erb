@@ -1,0 +1,7 @@
+<%= flash.count %>
+<% flash.each do |type, msg| %>
+  <div class="alert <%= alert_type(type)%> alert-dismissible fade show" role="alert">
+    <%= msg %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<% end %>
