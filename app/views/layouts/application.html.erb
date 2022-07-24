@@ -10,7 +10,12 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
+  <body class="<%= object_theme('body', current_user) %>">
+    <%= render partial: "shared/side_nav"%>
     <%= yield %>
   </body>
+  <%= render partial: "shared/notice" %>
+  <%= render partial: "shared/footer" %>
+  <footer  class="<%= object_theme('footer', current_user) %>">
+  </footer>
 </html>
